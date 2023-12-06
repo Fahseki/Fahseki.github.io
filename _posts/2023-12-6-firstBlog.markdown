@@ -2,14 +2,13 @@
 title: "第一篇Blog，暂时不知道写啥"
 layout: post
 date: 2023-12-06 17:18
-tag: jekyll
+tag: 
+- 随笔
 image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
-headerImage: true
-projects: true
-hidden: false
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
-category: project
-author: johndoe
+headerImage: false
+description: "随笔"
+category: blog
+author: Fahseki
 externalLink: false
 ---
 
