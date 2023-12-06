@@ -1,17 +1,16 @@
 ---
-title: "Markdown Common Elements"
+title: "第一篇Blog，暂时不知道写啥"
 layout: post
-date: 2016-02-24 22:44
-image: /assets/images/markdown.jpg
-headerImage: false
-hidden: true
-tag:
-- markdown
-- elements
-star: true
-category: blog
+date: 2023-12-06 17:18
+tag: jekyll
+image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
+headerImage: true
+projects: true
+hidden: false
+description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+category: project
 author: johndoe
-description: Markdown summary with different options
+externalLink: false
 ---
 
 ## Basic formatting
