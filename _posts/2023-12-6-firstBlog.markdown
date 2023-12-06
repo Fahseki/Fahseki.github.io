@@ -1,5 +1,5 @@
 ---
-title: "第一篇Blog，暂时不知道写啥"
+title: "版本管理工具 - git使用笔记"
 layout: post
 date: 2023-12-06 17:18
 tag: 
@@ -12,191 +12,66 @@ author: Fahseki
 externalLink: false
 ---
 
-## Basic formatting
+## 基本介绍
 
-This note **demonstrates** some of what [Markdown][1] is *capable of doing*.
+一、使用git进行版本管理
 
-And that's how to do it.
-
-{% highlight html %}
-This note **demonstrates** some of what [Markdown][some/link] is *capable of doing*.
-{% endhighlight %}
-
----
-
-## Headings
-
-There are six levels of headings. They correspond with the six levels of HTML headings. You've probably noticed them already in the page. Each level down uses one more hash character. But we are using just 4 of them.
-
-# Headings can be small
-
-## Headings can be small
-
-### Headings can be small
-
-#### Headings can be small
-
+1.1 github已有项目-将代码clone到本地
 {% highlight raw %}
-# Heading
-## Heading
-### Heading
-#### Heading
+git clone https://github.com/Fahseki/Fahseki.github.io.git
 {% endhighlight %}
+接下来就可以本地修改代码了
 
----
-
-## Lists
-
-### Ordered list
-
-1. Item 1
-2. A second item
-3. Number 3
-
+1.2 本地已创建项目，想要将项目纳入git管理之中，以下操作会将目录下文件全部纳入版本控制
 {% highlight raw %}
-1. Item 1
-2. A second item
-3. Number 3
+git init
 {% endhighlight %}
-
-### Unordered list
-
-* An item
-* Another item
-* Yet another item
-* And there's more...
-
+如果后续有新的文件，以下命令将指定文件，提交到git仓库中
 {% highlight raw %}
-* An item
-* Another item
-* Yet another item
-* And there's more...
+git add 
 {% endhighlight %}
 
----
 
-## Paragraph modifiers
+二、修改与同步
 
-### Quote
-
-> Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.
-
+2.1  本地修改后，查看当前发生修改，显示有变更的文件
 {% highlight raw %}
-> Here is a quote. What this is should be self explanatory.
-{% endhighlight raw %}
+git status
+{% endhighlight %}
 
----
-
-## URLs
-
-URLs can be made in a handful of ways:
-
-* A named link to [Mark It Down][3].
-* Another named link to [Mark It Down](https://google.com/)
-* Sometimes you just want a URL like <https://google.com/>.
-
+2.2 将修改提交到本地仓库
 {% highlight raw %}
-* A named link to [MarkItDown][3].
-* Another named link to [MarkItDown](https://google.com/)
-* Sometimes you just want a URL like <https://google.com/>.
+git commit
 {% endhighlight %}
 
----
-
-## Horizontal rule
-
-A horizontal rule is a line that goes across the middle of the page.
-It's sometimes handy for breaking things up.
-
+2.3 将本地仓库同步至远端分支，进行合并
 {% highlight raw %}
----
+git push
 {% endhighlight %}
 
----
+三、冲突解决
 
-## Images
-
-Markdown can also contain images. I'll need to add something here sometime.
-
+3.1 回退版本
 {% highlight raw %}
-![Markdowm Image][/image/url]
+git reset HEAD^            # 回退所有内容到上一个版本  
+git reset HEAD^ hello.php  # 回退 hello.php 文件的版本到上一个版本  
+git  reset  052e           # 回退到指定版本
 {% endhighlight %}
 
-![Markdowm Image][5]
 
-*Figure Caption*?
+四、协同编辑
 
+4.1 创建分支
 {% highlight raw %}
-![Markdowm Image][/image/url]
-<figcaption class="caption">Photo by John Doe</figcaption>
+git checkout [branch_name]
 {% endhighlight %}
 
-![Markdowm Image][5]
-<figcaption class="caption">Photo by John Doe</figcaption>
-
-*Bigger Images*?
-
+4.2 切换分支
 {% highlight raw %}
-![Markdowm Image][/image/url]{: class="bigger-image" }
+git switch [branch_name]
 {% endhighlight %}
 
-![Markdowm Image][5]{: class="bigger-image" }
-
----
-
-## Code
-
-A HTML Example:
-
-{% highlight html %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Just a test</h1>
-</body>
-</html>
+4.3 拉取远端分支代码，进行合并
+{% highlight raw %}
+git pull
 {% endhighlight %}
-
-A CSS Example:
-
-{% highlight css %}
-pre {
-    padding: 10px;
-    font-size: .8em;
-    white-space: pre;
-}
-
-pre, table {
-    width: 100%;
-}
-
-code, pre, tt {
-    font-family: Monaco, Consolas, Inconsolata, monospace, sans-serif;
-    background: rgba(0,0,0,.05);
-}
-{% endhighlight %}
-
-A JS Example:
-
-{% highlight js %}
-// Sticky Header
-$(window).scroll(function() {
-
-    if ($(window).scrollTop() > 900 && !$("body").hasClass('show-menu')) {
-        $('#hamburguer__open').fadeOut('fast');
-    } else if (!$("body").hasClass('show-menu')) {
-        $('#hamburguer__open').fadeIn('fast');
-    }
-
-});
-{% endhighlight %}
-
-[1]: https://daringfireball.net/projects/markdown/
-[2]: https://www.fileformat.info/info/unicode/char/2163/index.htm
-[3]: https://daringfireball.net/projects/markdown/basics
-[4]: https://daringfireball.net/projects/markdown/syntax
-[5]: https://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg

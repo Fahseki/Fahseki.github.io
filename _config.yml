@@ -67,11 +67,11 @@ projects: true
 about: true
 blog: true
 
-# do you want to show the "read time" of the posts?
-# timezone: Asia/Shanghai
+# 是否需要展示阅读时长?
+timezone: Asia/Shanghai
 read-time: false
 
-# do you want to show the "tags" inside the posts?
+# 是否展示文章tag?
 show-tags: true
 
 # related posts inside a post?
