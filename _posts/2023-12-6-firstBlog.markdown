@@ -80,3 +80,8 @@ git switch [branch_name]
 {% highlight raw %}
 git pull
 {% endhighlight %}
+
+
+![Markdowm Image][/assets/assets/firstBlog/markdown.jpg]
+<figcaption class="caption">测试增加一张图片</figcaption>
+
