@@ -2,6 +2,7 @@
 title: "版本管理工具 - git使用笔记"
 layout: post
 date: 2023-12-06 17:18
+star: false
 tag: 
 - 随笔
 image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
@@ -82,6 +83,6 @@ git pull
 {% endhighlight %}
 
 
-![Markdowm Image][/assets/assets/firstBlog/markdown.jpg]
+![Markdowm Image](firstBlog/markdown.jpg)
 <figcaption class="caption">测试增加一张图片</figcaption>
 
