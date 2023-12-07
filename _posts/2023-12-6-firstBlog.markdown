@@ -83,6 +83,6 @@ git pull
 {% endhighlight %}
 
 
-![Markdowm Image](firstBlog/markdown.jpg)
+![Markdowm Image](/assets/firstBlog/markdown.jpg)
 <figcaption class="caption">测试增加一张图片</figcaption>
 
