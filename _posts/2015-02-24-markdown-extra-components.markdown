@@ -6,7 +6,7 @@ image: /assets/images/markdown.jpg
 headerImage: false
 hidden: true
 tag:
-category: blog
+category: project
 author: jamesfoster
 description: Markdown summary with different options
 ---

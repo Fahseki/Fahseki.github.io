@@ -66,9 +66,10 @@ projects: true
 # if you don't need "about" or "blog", comment them out below
 about: true
 blog: true
+# tags_page: true
 
 # 是否需要展示阅读时长?
-timezone: Asia/Shanghai
+# timezone: Asia/Shanghai
 read-time: false
 
 # 是否展示文章tag?
