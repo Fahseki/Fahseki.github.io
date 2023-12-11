@@ -69,7 +69,7 @@ blog: true
 # tags_page: true
 
 # 是否需要展示阅读时长?
-# timezone: Asia/Shanghai
+timezone: Asia/Shanghai
 read-time: false
 
 # 是否展示文章tag?
